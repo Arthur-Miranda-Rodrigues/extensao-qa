@@ -13,4 +13,4 @@ Pré-condições: Nenhuma.   Passos:DADO que estamos na página de login do SIFI
 QUANDO clicarmos no botão "Entrar"   
 ENTÃO o sistema deve impedir a submissão e exibir mensagens de validação solicitando o preenchimento dos campos   Critérios de aceitação: Os campos obrigatórios devem impedir o acesso e exibir alertas de validação apropriados
 
-https://jam.dev/c/d7de539e-2216-4ad9-a295-f69e58f801c5
+https://jam.dev/c/b225c763-bd9d-4085-b055-ad10afde41f0
