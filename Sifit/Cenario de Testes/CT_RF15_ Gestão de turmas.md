@@ -4,7 +4,7 @@
 
 **Módulo:** Treinamento > Turmas
 
-**Arquivo de Referência:** `CT_RF14_ Gestão de turmas.md`
+**Arquivo de Referência:** `CT_RF15_ Gestão de turmas.md`
 
 ---
 
