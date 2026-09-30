@@ -1,72 +1,98 @@
-
-# Casos de Teste - Módulo Página Inicial (Dashboard / Home)
-
-* **Sistema:** SIFIT
-* **Módulo:** Página Inicial / Dashboard
+Aqui está a reestruturação do **Módulo Página Inicial (Dashboard / Home)** no mesmo padrão de tabelas e BDD:
 
 ---
 
-### 1. CT01 - Visualização dos Indicadores Principais (Cards de Resumo)
+## Cenário 02: Módulo Página Inicial (Dashboard / Home).
 
-* **Objetivo:** Verificar se a página inicial exibe corretamente os cartões com os dados resumidos e consolidados do sistema (ex.: Total de Alunos, Avaliações Pendentes, Treinos Ativos, etc.).
-* **Pré-condições:** Utilizador autenticado com sucesso no sistema SIFIT.
-* **Passos de Execução:**
-1. Efetuar o login no sistema ou clicar no logótipo/item de menu **Início** / **Dashboard**.
-2. Observar a área superior da página inicial onde ficam situados os cards/painéis de métricas.
-3. Comparar as contagens exibidas nos cards com os registos reais das respetivas tabelas/módulos.
+### Caso de Teste 01: Visualização dos Indicadores Principais (Cards de Resumo).
 
+| ID | Descrição |
+| --- | --- |
+| **C03-CT01** | Verificar se a página inicial exibe corretamente os cartões com os dados resumidos e consolidados do sistema (ex.: Total de Alunos, Avaliações Pendentes, Treinos Ativos, etc.). |
 
-* **Resultado Esperado:** Todos os cards de contagem e indicadores devem ser carregados corretamente sem erros de leitura e com os totais condizentes com a base de dados.
-* **Status:** PASSOU
+| **Pré-condições** |
+| --- |
+| Utilizador autenticado com sucesso no sistema SIFIT. |
 
----
+| **Passos** |
+| --- |
+| **DADO** que o utilizador está autenticado no SIFIT |
+| **E** está posicionado na página Inicial / Dashboard |
+| **QUANDO** observar a área superior da página onde ficam situados os cards de métricas |
+| **ENTÃO** o sistema deve carregar todos os indicadores de contagem corretamente sem erros de leitura e com os totais condizentes com a base de dados |
 
-### 2. CT02 - Navegação pelos Atalhos Rápidos da Página Inicial
-
-* **Objetivo:** Validar se os botões e atalhos rápidos presentes na página inicial direcionam o utilizador para as respetivas telas operacionais.
-* **Passos de Execução:**
-1. Na Página Inicial, localizar os botões ou links de atalho rápido (ex.: *Cadastrar Aluno*, *Agendar Avaliação*, *Criar Treino*).
-2. Clicar em um dos atalhos disponíveis (ex.: *Agendar Avaliação*).
-3. Verificar o redirecionamento da página e a URL/tela de destino.
-
-
-* **Resultado Esperado:** O sistema deve redirecionar o utilizador para a tela correspondente ao atalho clicado de forma rápida e sem mensagens de erro.
-* **Status:** PASSOU
+| **Critérios de aceitação** |
+| --- |
+| Os cards de contagem e indicadores principais devem exibir as informações consolidadas e corretas no painel inicial. |
 
 ---
 
-### 3. CT03 - Exibição da Agenda/Próximas Avaliações do Dia
+### Caso de Teste 02: Navegação pelos Atalhos Rápidos da Página Inicial.
 
-* **Objetivo:** Garantir que o painel de agendamentos do dia/semana exibe corretamente os próximos alunos agendados.
-* **Passos de Execução:**
-1. Aceder à **Página Inicial**.
-2. Verificar a secção de **Próximas Avaliações** ou **Agenda do Dia**.
-3. Confirmar se os nomes dos alunos, horários e status (ex.: *Pendente*, *Confirmado*) estão listados em ordem cronológica.
+| ID | Descrição |
+| --- | --- |
+| **C03-CT02** | Validar se os botões e atalhos rápidos presentes na página inicial direcionam o utilizador para as respetivas telas operacionais. |
 
+| **Pré-condições** |
+| --- |
+| O utilizador deve estar visualizando a Página Inicial do sistema. |
 
-* **Resultado Esperado:** A lista deve apresentar apenas os agendamentos relevantes para a data/período atual, ordenados por horário.
-* **Status:** PASSOU
+| **Passos** |
+| --- |
+| **DADO** que o utilizador está na Página Inicial |
+| **E** localiza os botões ou links de atalho rápido (ex.: *Cadastrar Aluno*, *Agendar Avaliação*, *Criar Treino*) |
+| **QUANDO** clicar em um dos atalhos disponíveis (ex.: *Agendar Avaliação*) |
+| **ENTÃO** o sistema deve redirecionar o utilizador para a tela correspondente ao atalho clicado de forma rápida e sem erros |
 
----
-
-### 4. CT04 - Acesso e Responsividade do Menu Lateral / Superior
-
-* **Objetivo:** Validar o correto funcionamento e recolhimento do menu principal de navegação na Página Inicial.
-* **Passos de Execução:**
-1. Na Página Inicial, clicar no botão de alternar/recolher o menu (ícone de três barras / hambúrguer).
-2. Verificar se a área útil do dashboard expande corretamente.
-3. Clicar novamente para expandir o menu e selecionar um submenu (ex.: *Treinamento > Avaliações*).
-
-
-* **Resultado Esperado:** O menu deve expandir e recolher suavemente, mantendo todos os links e ícones operacionais.
-* **Status:** PASSOU
+| **Critérios de aceitação** |
+| --- |
+| Todos os botões de atalho rápido devem realizar o redirecionamento correto para as telas de destino. |
 
 ---
 
-## Resumo da Execução
+### Caso de Teste 03: Exibição da Agenda/Próximas Avaliações do Dia.
 
-* **Total de Testes:** 4
-* **Passou:** 4
-* **Falhou:** 0
+| ID | Descrição |
+| --- | --- |
+| **C03-CT03** | Garantir que o painel de agendamentos do dia/semana exibe corretamente os próximos alunos agendados. |
+
+| **Pré-condições** |
+| --- |
+| O utilizador deve estar na Página Inicial do sistema SIFIT. |
+
+| **Passos** |
+| --- |
+| **DADO** que o utilizador acedeu à Página Inicial |
+| **QUANDO** verificar a secção de **Próximas Avaliações** ou **Agenda do Dia** |
+| **ENTÃO** o sistema deve listar os nomes dos alunos, horários e status (ex.: *Pendente*, *Confirmado*) em ordem cronológica conforme a data atual |
+
+| **Critérios de aceitação** |
+| --- |
+| A lista de agendamentos deve apresentar apenas os registros referentes ao período atual, ordenados cronologicamente por horário. |
+
+---
+
+### Caso de Teste 04: Acesso e Responsividade do Menu Lateral / Superior.
+
+| ID | Descrição |
+| --- | --- |
+| **C03-CT04** | Validar o correto funcionamento e recolhimento do menu principal de navegação na Página Inicial. |
+
+| **Pré-condições** |
+| --- |
+| O utilizador deve estar na Página Inicial do SIFIT. |
+
+| **Passos** |
+| --- |
+| **DADO** que o utilizador está na Página Inicial |
+| **E** clica no botão de alternar/recolher o menu (ícone de três barras / hambúrguer) |
+| **QUANDO** a área útil do dashboard for expandida |
+| **E** o utilizador clicar novamente para expandir o menu e selecionar um submenu (ex.: *Treinamento > Avaliações*) |
+| **ENTÃO** o menu deve alternar o estado de recolhimento suavemente e redirecionar para a funcionalidade selecionada |
+
+| **Critérios de aceitação** |
+| --- |
+| O menu principal deve recolher/expandir dinamicamente e manter a operabilidade de todos os seus links e submenus. |
+
 
 https://jam.dev/c/705ba553-9cb5-4090-bb55-f846e1a2ee4e
