@@ -1,75 +1,72 @@
 
-Casos de Teste - Módulo Página Inicial (Dashboard / Home)
-Sistema: SIFIT
+# Casos de Teste - Módulo Página Inicial (Dashboard / Home)
 
-Módulo: Página Inicial / Dashboard
+* **Sistema:** SIFIT
+* **Módulo:** Página Inicial / Dashboard
 
-1. CT01 - Visualização dos Indicadores Principais (Cards de Resumo)
-Objetivo: Verificar se a página inicial exibe corretamente os cartões com os dados resumidos e consolidados do sistema (ex.: Total de Alunos, Avaliações Pendentes, Treinos Ativos, etc.).
+---
 
-Pré-condições: Utilizador autenticado com sucesso no sistema SIFIT.
+### 1. CT01 - Visualização dos Indicadores Principais (Cards de Resumo)
 
-Passos de Execução:
+* **Objetivo:** Verificar se a página inicial exibe corretamente os cartões com os dados resumidos e consolidados do sistema (ex.: Total de Alunos, Avaliações Pendentes, Treinos Ativos, etc.).
+* **Pré-condições:** Utilizador autenticado com sucesso no sistema SIFIT.
+* **Passos de Execução:**
+1. Efetuar o login no sistema ou clicar no logótipo/item de menu **Início** / **Dashboard**.
+2. Observar a área superior da página inicial onde ficam situados os cards/painéis de métricas.
+3. Comparar as contagens exibidas nos cards com os registos reais das respetivas tabelas/módulos.
 
-Efetuar o login no sistema ou clicar no logótipo/item de menu Início / Dashboard.
 
-Observar a área superior da página inicial onde ficam situados os cards/painéis de métricas.
+* **Resultado Esperado:** Todos os cards de contagem e indicadores devem ser carregados corretamente sem erros de leitura e com os totais condizentes com a base de dados.
+* **Status:** PASSOU
 
-Comparar as contagens exibidas nos cards com os registos reais das respetivas tabelas/módulos.
+---
 
-Resultado Esperado: Todos os cards de contagem e indicadores devem ser carregados corretamente sem erros de leitura e com os totais condizentes com a base de dados.
+### 2. CT02 - Navegação pelos Atalhos Rápidos da Página Inicial
 
-Status: PASSOU
+* **Objetivo:** Validar se os botões e atalhos rápidos presentes na página inicial direcionam o utilizador para as respetivas telas operacionais.
+* **Passos de Execução:**
+1. Na Página Inicial, localizar os botões ou links de atalho rápido (ex.: *Cadastrar Aluno*, *Agendar Avaliação*, *Criar Treino*).
+2. Clicar em um dos atalhos disponíveis (ex.: *Agendar Avaliação*).
+3. Verificar o redirecionamento da página e a URL/tela de destino.
 
-2. CT02 - Navegação pelos Atalhos Rápidos da Página Inicial
-Objetivo: Validar se os botões e atalhos rápidos presentes na página inicial direcionam o utilizador para as respetivas telas operacionais.
 
-Passos de Execução:
+* **Resultado Esperado:** O sistema deve redirecionar o utilizador para a tela correspondente ao atalho clicado de forma rápida e sem mensagens de erro.
+* **Status:** PASSOU
 
-Na Página Inicial, localizar os botões ou links de atalho rápido (ex.: Cadastrar Aluno, Agendar Avaliação, Criar Treino).
+---
 
-Clicar em um dos atalhos disponíveis (ex.: Agendar Avaliação).
+### 3. CT03 - Exibição da Agenda/Próximas Avaliações do Dia
 
-Verificar o redirecionamento da página e a URL/tela de destino.
+* **Objetivo:** Garantir que o painel de agendamentos do dia/semana exibe corretamente os próximos alunos agendados.
+* **Passos de Execução:**
+1. Aceder à **Página Inicial**.
+2. Verificar a secção de **Próximas Avaliações** ou **Agenda do Dia**.
+3. Confirmar se os nomes dos alunos, horários e status (ex.: *Pendente*, *Confirmado*) estão listados em ordem cronológica.
 
-Resultado Esperado: O sistema deve redirecionar o utilizador para a tela correspondente ao atalho clicado de forma rápida e sem mensagens de erro.
 
-Status: PASSOU
+* **Resultado Esperado:** A lista deve apresentar apenas os agendamentos relevantes para a data/período atual, ordenados por horário.
+* **Status:** PASSOU
 
-3. CT03 - Exibição da Agenda/Próximas Avaliações do Dia
-Objetivo: Garantir que o painel de agendamentos do dia/semana exibe corretamente os próximos alunos agendados.
+---
 
-Passos de Execução:
+### 4. CT04 - Acesso e Responsividade do Menu Lateral / Superior
 
-Aceder à Página Inicial.
+* **Objetivo:** Validar o correto funcionamento e recolhimento do menu principal de navegação na Página Inicial.
+* **Passos de Execução:**
+1. Na Página Inicial, clicar no botão de alternar/recolher o menu (ícone de três barras / hambúrguer).
+2. Verificar se a área útil do dashboard expande corretamente.
+3. Clicar novamente para expandir o menu e selecionar um submenu (ex.: *Treinamento > Avaliações*).
 
-Verificar a secção de Próximas Avaliações ou Agenda do Dia.
 
-Confirmar se os nomes dos alunos, horários e status (ex.: Pendente, Confirmado) estão listados em ordem cronológica.
+* **Resultado Esperado:** O menu deve expandir e recolher suavemente, mantendo todos os links e ícones operacionais.
+* **Status:** PASSOU
 
-Resultado Esperado: A lista deve apresentar apenas os agendamentos relevantes para a data/período atual, ordenados por horário.
+---
 
-Status: PASSOU
+## Resumo da Execução
 
-4. CT04 - Acesso e Responsividade do Menu Lateral / Superior
-Objetivo: Validar o correto funcionamento e recolhimento do menu principal de navegação na Página Inicial.
+* **Total de Testes:** 4
+* **Passou:** 4
+* **Falhou:** 0
 
-Passos de Execução:
-
-Na Página Inicial, clicar no botão de alternar/recolher o menu (ícone de três barras / hambúrguer).
-
-Verificar se a área útil do dashboard expande corretamente.
-
-Clicar novamente para expandir o menu e selecionar um submenu (ex.: Treinamento > Avaliações).
-
-Resultado Esperado: O menu deve expandir e recolher suavemente, mantendo todos os links e ícones operacionais.
-
-Status: PASSOU
-
-Resumo da Execução
-Total de Testes: 4
-
-Passou: 4
-
-Falhou:
-
+https://jam.dev/c/705ba553-9cb5-4090-bb55-f846e1a2ee4e
