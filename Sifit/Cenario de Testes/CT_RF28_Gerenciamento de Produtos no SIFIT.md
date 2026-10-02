@@ -170,6 +170,8 @@
 
  |
 
+ https://jam.dev/c/379e33b4-4a28-400f-a51d-145934dea313
+
 | **Critérios de Aceitação** |
 | --- |
 | O produto excluído não deve mais aparecer na busca/listagem de produtos e os contadores numéricos devem ser redefinidos corretamente.
