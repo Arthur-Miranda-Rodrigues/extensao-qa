@@ -1,7 +1,7 @@
 
 ---
 
-## Cenário: Gestão de Modelos de Contrato no sistema SIFIT
+## Cenário de teste: Gestão de Modelos de Contrato no sistema SIFIT
 
 ### Caso de Teste 01: Acessar formulário de criação de modelo de contrato
 
