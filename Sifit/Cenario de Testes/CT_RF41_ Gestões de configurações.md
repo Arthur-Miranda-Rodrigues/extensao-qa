@@ -64,8 +64,8 @@
 | **QUANDO** selecionar o período desejado no filtro de datas (Ex: DE / ATÉ) |
 | **ENTÃO** o sistema deve listar todos os registros de presença/check-in correspondentes |
 
-https://jam.dev/c/0b9ab8de-b012-49f5-aea7-4f3e7af5153c
-
 | **Critérios de aceitação** |
 | --- |
 | O sistema deve exibir os horários, nomes dos clientes e contadores de presença dentro do período selecionado. |
+
+https://jam.dev/c/0b9ab8de-b012-49f5-aea7-4f3e7af5153c
