@@ -1,7 +1,7 @@
 
 ---
 
-## Cenário 10: Gestão e consulta de planos no sistema SIFIT
+## Cenário de teste: Gestão e consulta de planos no sistema SIFIT
 
 ### Caso de Teste 01: Consultar plano por código ou nome com sucesso
 
