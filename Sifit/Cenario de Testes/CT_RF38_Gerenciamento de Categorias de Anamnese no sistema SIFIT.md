@@ -1,4 +1,3 @@
-Aqui estão os Casos de Teste para o módulo de **Categorias de Anamnese** do sistema SIFIT, elaborados com base nas funcionalidades exibidas no vídeo:
 
 ---
 
