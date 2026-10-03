@@ -3,7 +3,7 @@
 
 ---
 
-## Cenário 22: Gestão de colaboradores via sistema SIFIT
+## Cenário de teste: Gestão de colaboradores via sistema SIFIT
 
 ### Caso de Teste 01: Adicionar novo colaborador com dados válidos
 
