@@ -1,7 +1,7 @@
 
 ---
 
-## Cenário 21: Geração e Filtragem de Relatórios Operacionais e Financeiros
+## Cenário de teste: Geração e Filtragem de Relatórios Operacionais e Financeiros
 
 ### Caso de Teste 01: Gerar relatório operacional com filtro por período
 
