@@ -1,5 +1,5 @@
 
-## Cenário 18: Gerenciamento e Filtro de Caixas no Módulo Financeiro
+## Cenário de teste: Gerenciamento e Filtro de Caixas no Módulo Financeiro
 
 ### Caso de Teste 01: Abrir um novo caixa com dados válidos
 
