@@ -1,88 +1,123 @@
 
-Casos de Teste - Gerenciamento de Exercícios 
-Sistema: SIFIT
 
-Módulo: Treinamento > Exercícios
 
-1. CT01 - Visualização e Edição de Exercício Existente
-Objetivo: Verificar a abertura do modal de edição de um exercício cadastrado num grupo muscular.
+---
 
-Pré-condições: Utilizador autenticado e na tela "Biblioteca de Exercícios".
+# Cenário de teste: Gerenciamento de Exercícios
 
-Passos de Execução:
+## 1. Descrição
 
-No grupo muscular Bíceps, localizar o exercício AA.
+Este documento especifica os casos de teste referentes ao módulo **Treinamento > Exercícios** do sistema **SiFit**. O objetivo é validar a gestão da biblioteca de exercícios por grupos musculares, contemplando a criação, edição com upload de mídias, exclusão e a validação de regras de campos obrigatórios.
 
-Clicar no ícone de pesquisa/visualização (lupa) do exercício.
+---
 
-No modal "Exercício", carregar uma imagem para o exercício.
+## 2. Cenários de Teste
 
-Clicar no botão "Salvar".
+### Cenário 01: Gestão e Operações na Biblioteca de Exercícios
 
-Resultado Esperado: As alterações do exercício devem ser salvas com sucesso.
+#### Caso de Teste 01: Visualização e Edição de Exercício Existente
 
-Resultado Obtido: O modal salvou a inclusão da imagem e retornou à lista da biblioteca.
+| ID | Descrição |
+| --- | --- |
+| **C01-CT01** | Validar a alteração e inclusão de mídias em um exercício cadastrado na biblioteca. |
 
-Status: PASSOU
+| **Pré-condições** |
+| --- |
+| Usuário autenticado no SiFit e localizado na tela **Biblioteca de Exercícios**. |
+| Existir o grupo muscular "Bíceps" cadastrado contendo ao menos o exercício "AA". |
 
-2. CT02 - Cadastro de Novo Exercício num Grupo Muscular
-Objetivo: Validar a criação e associação de um novo exercício a um grupo muscular específico.
+| **Passos** |
+| --- |
+| **DADO** que o usuário está na tela **Biblioteca de Exercícios** |
+| **E** localiza o exercício "AA" dentro do grupo muscular **Bíceps** |
+| **QUANDO** clicar no ícone de visualização (lupa) do exercício |
+| **E** carregar uma nova imagem para o exercício dentro do modal **Exercício** |
+| **E** clicar no botão **Salvar** |
+| **ENTÃO** as alterações do exercício devem ser salvas com sucesso |
+| **E** o sistema deve retornar à listagem da biblioteca exibindo o registro atualizado. |
 
-Passos de Execução:
+| **Critérios de Aceitação** |
+| --- |
+| * A mídia enviada deve ser vinculada corretamente ao exercício. |
+| * O modal deve ser fechado e os dados atualizados sem erros de execução. |
 
-No card do grupo muscular Bíceps, clicar no botão "+ Adicionar".
+---
 
-No modal "Exercício", preencher o campo Nome (ex: "Quarken").
+#### Caso de Teste 02: Cadastro de Novo Exercício em Grupo Muscular
 
-Anexar uma imagem e/ou vídeo demonstrativo.
+| ID | Descrição |
+| --- | --- |
+| **C01-CT02** | Validar a criação de um novo exercício e sua vinculação a um grupo muscular específico. |
 
-Clicar no botão "Salvar".
+| **Pré-condições** |
+| --- |
+| Usuário autenticado no SiFit e localizado na tela **Biblioteca de Exercícios**. |
 
-Resultado Esperado: O novo exercício deve ser cadastrado e exibido no card do grupo muscular correspondente, atualizando o contador total.
+| **Passos** |
+| --- |
+| **DADO** que o usuário está na tela **Biblioteca de Exercícios** |
+| **QUANDO** clicar no botão **+ Adicionar** presente no card do grupo muscular **Bíceps** |
+| **E** preencher o campo **Nome** com "Quarken" |
+| **E** anexar uma imagem e/ou vídeo demonstrativo no modal **Exercício** |
+| **E** clicar no botão **Salvar** |
+| **ENTÃO** o novo exercício deve ser cadastrado e exibido no card do grupo muscular correspondente |
+| **E** o contador totalizador da biblioteca de exercícios deve ser incrementado em +1. |
 
-Resultado Obtido: O exercício "Quarken" foi adicionado ao grupo Bíceps e o contador total da biblioteca passou de 5 para 6 (e posteriormente para 7 com novos testes).
+| **Critérios de Aceitação** |
+| --- |
+| * O exercício "Quarken" deve constar na listagem do grupo **Bíceps**. |
+| * O contador global da biblioteca deve ser atualizado refletindo o novo quantitativo. |
 
-Status: PASSOU
+---
 
-3. CT03 - Exclusão/Deleção de Exercício de um Grupo Muscular
-Objetivo: Verificar se o sistema permite remover um exercício de um grupo muscular.
+#### Caso de Teste 03: Exclusão de Exercício de um Grupo Muscular
 
-Passos de Execução:
+| ID | Descrição |
+| --- | --- |
+| **C01-CT03** | Validar a remoção de um exercício de um grupo muscular. |
 
-No grupo muscular Bíceps, localizar o exercício desejado (ex: "Quarken" ou "AA").
+| **Pré-condições** |
+| --- |
+| Existir ao menos um exercício cadastrado no grupo muscular selecionado (ex.: "Quarken" ou "AA"). |
 
-Clicar no ícone de exclusão (X em vermelho) ao lado do exercício.
+| **Passos** |
+| --- |
+| **DADO** que o usuário está na tela **Biblioteca de Exercícios** |
+| **QUANDO** localizar o exercício desejado no grupo muscular **Bíceps** |
+| **E** clicar no ícone de exclusão (**X** em vermelho) ao lado do exercício |
+| **E** confirmar a remoção no modal de confirmação (*"Deseja deletar o exercício?"*) clicando em **Confirmar** |
+| **ENTÃO** o exercício deve ser removido da listagem do grupo muscular |
+| **E** o contador totalizador da biblioteca deve ser decrementado em -1. |
 
-No modal de confirmação ("Deseja deletar o exercício?"), clicar em "Confirmar".
+| **Critérios de Aceitação** |
+| --- |
+| * O registro excluído não deve mais ser exibido na interface. |
+| * A contagem total da biblioteca deve ser recalculada imediatamente. |
 
-Resultado Esperado: O exercício deve ser removido do grupo muscular e o totalizador da biblioteca deve ser decrementado.
+---
 
-Resultado Obtido: O exercício foi removido da lista e o contador total de exercícios foi atualizado corretamente.
+#### Caso de Teste 04: Validação de Campo Obrigatório no Cadastro de Exercício
 
-Status: PASSOU
+| ID | Descrição |
+| --- | --- |
+| **C01-CT04** | Validar a regra de negócio que impede a gravação de exercício sem a inclusão do nome. |
 
-4. CT04 - Validação de Campo Obrigatório no Cadastro de Exercício
-Objetivo: Validar a regra de negócio que impede o cadastro de um exercício sem preencher o nome.
+| **Pré-condições** |
+| --- |
+| Usuário com o modal **Exercício** aberto. |
 
-Passos de Execução:
+| **Passos** |
+| --- |
+| **DADO** que o usuário aciona a opção **+ Adicionar** em um grupo muscular |
+| **E** deixa o campo **Nome** em branco |
+| **QUANDO** anexar uma imagem ou vídeo demonstrativo |
+| **E** clicar no botão **Salvar** |
+| **ENTÃO** o sistema deve bloquear a gravação do registro |
+| **E** exibir a mensagem de aviso: *"Informe o nome do exercício."*. |
 
-Clicar em "+ Adicionar" num grupo muscular (ex: Teste).
-
-No modal "Exercício", anexar uma imagem sem preencher o campo Nome.
-
-Clicar no botão "Salvar".
-
-Resultado Esperado: O sistema deve bloquear a gravação e exibir uma mensagem de aviso solicitando o preenchimento do campo obrigatório.
-
-Resultado Obtido: O sistema exibiu a mensagem de aviso: "Informe o nome do exercício.".
-
-Status: PASSOU
-
-Resumo da Execução
-Total de Testes: 4
-
-Passou: 4
-
-Falhou: 0
+| **Critérios de Aceitação** |
+| --- |
+| * O cadastro não deve ser efetuado enquanto o campo obrigatório **Nome** não for preenchido. |
+| * A mensagem de alerta deve ser clara e visível para o operador. |
 
 https://jam.dev/c/a6ce9380-799e-4fb0-8438-1b430601706d
