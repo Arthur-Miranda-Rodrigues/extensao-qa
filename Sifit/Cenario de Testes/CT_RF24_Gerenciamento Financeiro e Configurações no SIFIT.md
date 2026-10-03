@@ -1,7 +1,7 @@
 
 ---
 
-## Cenário23: Gerenciamento Financeiro e Configurações no SIFIT
+## Cenário de teste: Gerenciamento Financeiro e Configurações no SIFIT
 
 ### Caso de Teste 01: Criar uma nova cobrança via Pagar.me com dados válidos
 
