@@ -1,7 +1,7 @@
 
 ---
 
-## Cenário 20: Gerenciamento e Cadastro de Despesas Fixas
+## Cenário de teste: Gerenciamento e Cadastro de Despesas Fixas
 
 ### Caso de Teste 01: Cadastrar uma nova despesa fixa com sucesso
 
