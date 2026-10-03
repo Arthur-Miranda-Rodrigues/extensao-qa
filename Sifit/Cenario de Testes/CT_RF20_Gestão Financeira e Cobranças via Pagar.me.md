@@ -1,6 +1,6 @@
 
 
-## Cenário 19: Gestão Financeira e Cobranças via Pagar.me no SIFIT
+## Cenário de teste: Gestão Financeira e Cobranças via Pagar.me no SIFIT
 
 ### Caso de Teste 01: Solicitar saque de saldo disponível
 
